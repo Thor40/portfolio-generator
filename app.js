@@ -1,6 +1,6 @@
 // const profileDataArgs = process.argv.slice(2, process.argv.length);
 // console.log(profileDataArgs);
-const fs = require('fs');
+const { writeFile, copyFile } = require('./utils/generate-site.js');
 const generatePage = require('./src/page-template.js');
 
 // const profileDataArgs = process.argv.slice(2);
@@ -152,7 +152,7 @@ promptUser()
   .catch(err => {
     console.log(err);
   });
-  
+
 // promptUser()
 //   .then(promptProject)
 //   .then(portfolioData => {
